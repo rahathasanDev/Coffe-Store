@@ -3,7 +3,7 @@ import React from 'react';
 const UpdateCoffe = () => {
   return (
     <div>
-      <h2>vfhdfjghjkhk</h2>
+      <h2>Coffe</h2>
     </div>
   );
 };
