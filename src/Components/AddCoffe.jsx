@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 
 
 const AddCoffee = () => {
@@ -5,7 +6,6 @@ const AddCoffee = () => {
         event.preventDefault();
 
         const form = event.target;
-
         const name = form.name.value;
         const quantity = form.quantity.value;
         const supplier = form.supplier.value;
@@ -29,20 +29,27 @@ const AddCoffee = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                // if(data.insertedId){
-                //     Swal.fire({
-                //         title: 'Success!',
-                //         text: 'Coffee Added Successfully',
-                //         icon: 'success',
-                //         confirmButtonText: 'Cool'
-                //       })
-                // }
+                if (data.insertedId) {
+                    // Swal.fire({
+                    //     title: 'Error!',
+                    //     text: 'Do you want to continue',
+                    //     icon: 'error',
+                    //     confirmButtonText: 'Cool'
+                    //   })
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Coffee Added Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
+
             })
     }
 
 
     return (
-        <div className="bg-gray-600 p-24">
+        <div className=" p-24">
             <h2 className="text-3xl font-extrabold">Add a Coffee</h2>
             <form onSubmit={handleAddCoffee}>
                 {/* form name and quantity row */}
