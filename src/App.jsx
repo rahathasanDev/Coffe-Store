@@ -6,7 +6,7 @@ import "./App.css";
 function App() {
   const coffees = useLoaderData();
   return (
-    <div className="m-20   ">
+    <div className="m-20 ">
       <h1 className="text-6xl text-center font-bold font-serif ">
         Cold Coffes:{coffees.length}
       </h1>

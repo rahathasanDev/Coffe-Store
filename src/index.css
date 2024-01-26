@@ -1,5 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+ background-color: azure;
+}
+.h2 ,p  {
+  color: slategray;
+  font-size: large;
+}
+.card-title{
+  color:black;
+}
